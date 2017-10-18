@@ -47,7 +47,9 @@ namespace Find.Models
 
     public string FindAndReplace2()
     {
-      return _inputOne.Replace(_inputTwo,_inputThree);
+      string[] splitString = _inputOne.Split('!', ' ');
+      string splitStrings = String.Join("-", splitString);
+      return splitStrings.Replace(_inputTwo,_inputThree);
     }
 
   }
